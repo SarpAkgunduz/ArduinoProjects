@@ -13,15 +13,15 @@ Servo myservo;
 float sensor_Distance(){
 //Read sensor value and calculate distance. Returns Distance
   digitalWrite(trigPin, LOW);  
-	delayMicroseconds(2);  
-	digitalWrite(trigPin, HIGH);  
-	delayMicroseconds(10);  
-	digitalWrite(trigPin, LOW);  
+  delayMicroseconds(2);  
+  digitalWrite(trigPin, HIGH);  
+  delayMicroseconds(10);  
+  digitalWrite(trigPin, LOW);  
   duration = pulseIn(echoPin, HIGH);  
   distance = (duration*.0343)/2;  
   Serial.print("Distance: ");  
-	Serial.println(distance);  
-	delay(100);
+  Serial.println(distance);  
+  delay(100);
   return distance;
 }
 
@@ -62,7 +62,7 @@ void servo_State(){
 void setup() {
   //hcsr04 setup
   pinMode(trigPin, OUTPUT);  
-	pinMode(echoPin, INPUT);  
+  pinMode(echoPin, INPUT);  
   Serial.begin(9600);
 
   //lcd setup
