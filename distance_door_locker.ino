@@ -48,7 +48,7 @@ String LCD_print(){
   return State;
 }
 
-void servo(){
+void servo_State(){
 //Set servo 0 to 180 degree with State variable from previous function.
   if (State.equals("open")){
     myservo.write(180);
@@ -78,5 +78,6 @@ void loop() {
   
   sensor_Distance();
   LCD_print();
-
+  servo_State();
+	
 }
